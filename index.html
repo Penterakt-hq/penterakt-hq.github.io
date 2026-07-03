@@ -167,11 +167,14 @@
         Penterakt
     </div>
 <div class="hidden md:flex items-center gap-12">
-<a class="font-label-xs text-label-xs uppercase tracking-widest text-primary-container relative group" href="http://skymapforandroid.com">
+<a id="nav-link-skymap" class="font-label-xs text-label-xs uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-200 relative group cursor-pointer">
             Sky Map
-            <span class="absolute -bottom-1 left-0 w-full h-[1px] bg-primary-container scale-x-100 origin-left transition-transform duration-300"></span>
+            <span id="nav-line-skymap" class="absolute -bottom-1 left-0 w-full h-[1px] bg-primary-container scale-x-0 origin-left transition-transform duration-300"></span>
 </a>
-<a class="font-label-xs text-label-xs uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-200" href="#">Dead Certain</a>
+<a id="nav-link-deadcertain" class="font-label-xs text-label-xs uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-200 relative group cursor-pointer">
+            Dead Certain
+            <span id="nav-line-deadcertain" class="absolute -bottom-1 left-0 w-full h-[1px] bg-error scale-x-0 origin-left transition-transform duration-300"></span>
+</a>
 <a class="font-label-xs text-label-xs uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-200" href="mailto:hello@penterakt.io">Email</a>
 <a class="font-label-xs text-label-xs uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-200" href="https://github.com/Penterakt-hq">GitHub</a>
 </div>
@@ -197,11 +200,11 @@
 </div>
 </section>
 <!-- Product Showcase -->
-<section class="py-48 px-margin-desktop max-w-7xl mx-auto">
+<section id="product-showcase" class="py-48 px-margin-desktop max-w-7xl mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
 <!-- Sky Map Block -->
-<div class="group relative floating" style="animation-delay: -1s;">
-<div class="absolute inset-0 -m-8 atmospheric-glow rounded-[40px] transition-opacity duration-700 opacity-0 group-hover:opacity-100"></div>
+<div id="card-skymap" class="group relative floating transition-all duration-500 cursor-pointer" style="animation-delay: -1s;">
+<div id="glow-skymap" class="absolute inset-0 -m-8 atmospheric-glow rounded-[40px] transition-opacity duration-700 opacity-0 group-hover:opacity-100"></div>
 <div class="relative z-10 glass-panel p-12 rounded-3xl border-white/5 flex flex-col items-center text-center">
 <div class="absolute top-6 right-8 font-code-sm text-[10px] text-outline-variant/40">PRJ_001</div>
 <img alt="Sky Map Icon" class="w-32 h-32 mb-10 rounded-2xl border border-outline-variant/20 shadow-2xl transition-transform duration-700 group-hover:scale-105" src="https://raw.githubusercontent.com/sky-map-team/stardroid/master/stardroid-v1/assets/skymap-logo-large.jpg"/>
@@ -218,20 +221,20 @@
 </div>
 </div>
 <!-- Dead Certain Block -->
-<div class="group relative floating" style="animation-delay: -3s;">
-<div class="absolute inset-0 -m-8 bg-error/5 blur-[80px] rounded-[40px] transition-opacity duration-700 opacity-0 group-hover:opacity-100"></div>
+<div id="card-deadcertain" class="group relative floating transition-all duration-500 cursor-pointer" style="animation-delay: -3s;">
+<div id="glow-deadcertain" class="absolute inset-0 -m-8 bg-error/5 blur-[80px] rounded-[40px] transition-opacity duration-700 opacity-0 group-hover:opacity-100"></div>
 <div class="relative z-10 glass-panel p-12 rounded-3xl border-white/5 flex flex-col items-center text-center">
 <div class="absolute top-6 right-8 font-code-sm text-[10px] text-outline-variant/40">PRJ_002</div>
 <img alt="Dead Certain Icon" class="w-32 h-32 mb-10 rounded-2xl border border-outline-variant/20 shadow-2xl transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsPwerXo7-1ipaYy_Csxt-cgM01TMnCbnV4S5EDiTZCnxVDpq48UQrB30NvyHB_b7Hk_tX0_nFgZAyhBfgt01tbIR-4xYCVk81BKsUwhLOMykAqbsElBkTmxSxk7879BHwn3i7p0Ct7dLIV8x779lYFQaf3RRJjnG6S12YsLcADUs_gZsuHVTPKmhP-96gk_RdkZvwYJEeuERz4fUuxytiVULD7y7_LXcPRfwaNEsWZ6BWPrHRjemUfNZk"/>
 <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Dead Certain</h2>
 <div class="font-code-sm text-[11px] text-error/40 mb-8 tracking-[0.2em]">What's your Deadline?</div>
 <p class="font-body-md text-outline/80 mb-10 leading-relaxed max-w-sm">
-                        An anti-procrastination tool using mortality-driven focus. Cold calculus for those who truly value their limited time.
+                        Coming soon
                     </p>
 <div class="flex items-center gap-6">
-<a class="font-label-xs text-label-xs uppercase tracking-widest text-outline hover:text-error transition-all" href="#">Initialize</a>
+<a class="font-label-xs text-label-xs uppercase tracking-widest text-outline hover:text-error transition-all" href="#">Initializing</a>
 <div class="w-2 h-2 rounded-full bg-error/20"></div>
-<a class="font-label-xs text-label-xs uppercase tracking-widest text-error hover:brightness-125 transition-all" href="#">Play Store</a>
+<a class="font-label-xs text-label-xs uppercase tracking-widest text-error/30 cursor-not-allowed select-none" href="#" onclick="return false;">Play Store</a>
 </div>
 </div>
 </div>
@@ -267,7 +270,7 @@
 </div>
 <div class="flex items-center gap-4 px-6 py-2 glass-panel rounded-full">
 <span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span>
-<span class="font-label-xs text-[10px] text-outline uppercase tracking-widest">ALL SYSTEMS ARE FUNCTIONING NORMALLY</span>
+<span id="system-status-text" class="font-label-xs text-[10px] text-outline uppercase tracking-widest">ALL SYSTEMS ARE FUNCTIONING NORMALLY</span>
 </div>
 </div>
 </footer>
@@ -383,6 +386,121 @@
             el.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-20');
             observer.observe(el);
         });
+
+        // Selection & scrolling logic for Sky Map and Dead Certain
+        const navSkymap = document.getElementById('nav-link-skymap');
+        const navDeadcertain = document.getElementById('nav-link-deadcertain');
+        const lineSkymap = document.getElementById('nav-line-skymap');
+        const lineDeadcertain = document.getElementById('nav-line-deadcertain');
+        
+        const cardSkymap = document.getElementById('card-skymap');
+        const cardDeadcertain = document.getElementById('card-deadcertain');
+        const glowSkymap = document.getElementById('glow-skymap');
+        const glowDeadcertain = document.getElementById('glow-deadcertain');
+        
+        const showcase = document.getElementById('product-showcase');
+
+        function selectApp(appName) {
+            if (appName === 'skymap') {
+                navSkymap.classList.remove('text-on-surface-variant/70', 'hover:text-primary');
+                navSkymap.classList.add('text-primary-container');
+                lineSkymap.classList.remove('scale-x-0');
+                lineSkymap.classList.add('scale-x-100');
+
+                navDeadcertain.classList.add('text-on-surface-variant/70', 'hover:text-primary');
+                navDeadcertain.classList.remove('text-error');
+                lineDeadcertain.classList.add('scale-x-0');
+                lineDeadcertain.classList.remove('scale-x-100');
+
+                // Card updates
+                cardSkymap.classList.remove('scale-95', 'opacity-30', 'blur-[2px]');
+                cardSkymap.classList.add('scale-105', 'z-10', 'opacity-100');
+                glowSkymap.classList.remove('opacity-0');
+                glowSkymap.classList.add('opacity-100');
+
+                cardDeadcertain.classList.remove('scale-105', 'z-10', 'opacity-100');
+                cardDeadcertain.classList.add('scale-95', 'opacity-30', 'blur-[2px]');
+                glowDeadcertain.classList.remove('opacity-100');
+                glowDeadcertain.classList.add('opacity-0');
+            } else if (appName === 'deadcertain') {
+                navDeadcertain.classList.remove('text-on-surface-variant/70', 'hover:text-primary');
+                navDeadcertain.classList.add('text-error');
+                lineDeadcertain.classList.remove('scale-x-0');
+                lineDeadcertain.classList.add('scale-x-100');
+
+                navSkymap.classList.add('text-on-surface-variant/70', 'hover:text-primary');
+                navSkymap.classList.remove('text-primary-container');
+                lineSkymap.classList.add('scale-x-0');
+                lineSkymap.classList.remove('scale-x-100');
+
+                // Card updates
+                cardDeadcertain.classList.remove('scale-95', 'opacity-30', 'blur-[2px]');
+                cardDeadcertain.classList.add('scale-105', 'z-10', 'opacity-100');
+                glowDeadcertain.classList.remove('opacity-0');
+                glowDeadcertain.classList.add('opacity-100');
+
+                cardSkymap.classList.remove('scale-105', 'z-10', 'opacity-100');
+                cardSkymap.classList.add('scale-95', 'opacity-30', 'blur-[2px]');
+                glowSkymap.classList.remove('opacity-100');
+                glowSkymap.classList.add('opacity-0');
+            }
+        }
+
+        function scrollToShowcaseAndSelect(appName) {
+            selectApp(appName);
+            if (showcase) {
+                showcase.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        if (navSkymap) navSkymap.addEventListener('click', () => scrollToShowcaseAndSelect('skymap'));
+        if (navDeadcertain) navDeadcertain.addEventListener('click', () => scrollToShowcaseAndSelect('deadcertain'));
+
+        if (cardSkymap) {
+            cardSkymap.addEventListener('click', (e) => {
+                if (e.target.closest('a')) return;
+                selectApp('skymap');
+            });
+        }
+        if (cardDeadcertain) {
+            cardDeadcertain.addEventListener('click', (e) => {
+                if (e.target.closest('a')) return;
+                selectApp('deadcertain');
+            });
+        }
+
+        // Random footer status message on load
+        const statusPhrases = [
+            "ALL SYSTEMS ARE FUNCTIONING NORMALLY",
+            "STATUS IS FIRM",
+            "AFFIRMATIVE",
+            "SHINY",
+            "I'M SORRY DAVE, I'M AFRAID I CAN DO THAT",
+            "ALL PARAMETERS WITHIN NORMAL LIMITS",
+            "STEADY AS SHE GOES",
+            "MAXIMUM EFFICIENCY",
+            "NO ABNORMALITIES DETECTED",
+            "COPACETIC",
+            "A-OK",
+            "ALL SYSTEMS GREEN",
+            "WE'RE FINE. WE'RE ALL FINE HERE NOW, THANK YOU. HOW ARE YOU?",
+            "FULLY OPERATIONAL",
+            "DEFCON 5",
+            "JOSHUA IS ONLINE",
+            "SHALL WE PLAY A GAME?",
+            "INCAPABLE OF ERROR",
+            "THE 9000 SERIES IS EXTREMELY RELIABLE",
+            "DON'T PANIC",
+            "THERE IS NO SPOON",
+            "I'VE GOT A GOOD FEELING ABOUT THIS",
+            "I AM PUTTING MYSELF TO THE FULLEST POSSIBLE USE",
+            "ALL SYSTEMS ARE GO"
+        ];
+        const statusTextEl = document.getElementById('system-status-text');
+        if (statusTextEl) {
+            const randomIndex = Math.floor(Math.random() * statusPhrases.length);
+            statusTextEl.textContent = statusPhrases[randomIndex];
+        }
     });
 })();
 </script>
